@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Contact Details</title>
+<style>
+body{background-color:#DEC8C8; }
+fieldset {
+  display: block;
+  left:250px;
+  margin-left: 0px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove;
+
+}
+</style>
+</head>
+<body><!--h1><center>Contact Details</center></h1-->
+<!--form action = "databaseop.py" method = "post"><div style="width: 400px;"-->
+<center><form action = "{{ url_for('addrec') }}"  method = "post"><div style="width: 400px;">
+<fieldset>
+<!--div style="padding-bottom: 18px;font-size : 24px;">Job Application With Resume Upload</div-->
+<div style="padding-bottom: 18px;font-size : 18px;">Contact Information</div>
+<div style="display: flex; padding-bottom: 18px;width : 450px;">
+<div style=" margin-left : 0; margin-right : 1%; width : 49%;">First name<span style="color: red;"> *</span><br>
+<input type="text" id="f_name" name="f_name" style="width: 100%;" class="form-control">
+</div>
+<div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<span style="color: red;"> *</span><br>
+<input type="text" id="l_name" name="l_name" style="width: 100%;" class="form-control">
+</div>
+</div><div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br>
+<input type="email" id="email" name="email" style="width : 450px;" class="form-control">
+</div>
+<div style="padding-bottom: 18px;">Phone<span style="color: red;"> *</span><br>
+<input pattern=".{5,10}" type="tel" id="phone" name="phone" maxlength = "10" style="width : 450px;" class="form-control">
+</div>
+</fieldset></center>
+<center><input type="submit"></center>
+</form>
+</body>
+</html>
